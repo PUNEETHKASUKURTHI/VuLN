@@ -74,8 +74,7 @@ namespace VulnerableApp.Controllers
         [HttpPost("delete/{id}")]
         public IActionResult DeleteUser(int id)
         {
-            // Insecure direct object reference (CWE-639)
-            string query = $"DELETE FROM Users WHERE Id = {id}";  // SQL Injection (CWE-89)
+            string query = $"DELETE FROM Users WHERE Id = '{id}'";  // SQL Injection (CWE-89)
             // Execute query...
 
             return Ok("User deleted.");
