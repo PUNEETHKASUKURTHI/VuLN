@@ -9,7 +9,7 @@ namespace VulnerableApp.Controllers
     [Route("api/[controller]")]
     public class UserController : ControllerBase
     {
-        private readonly string connectionString = "Data Source=localhost;Initial Catalog=UsersDB;User ID=admin;Password=password";  // Hardcoded secret (CWE-798)
+        private readonly string connectionString = "Data Source=localhost;Initial Catalog=UsersDB;User ID=admin;Password=password";  // Hardcasdsadoded secret (CWE-798)
 
         [HttpGet("{id}")]
         public IActionResult GetUser(int id)
