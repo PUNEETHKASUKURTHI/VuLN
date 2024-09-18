@@ -7,7 +7,7 @@ namespace VulnerableApp.Controllers
     [Route("api/[controller]")]
     public class PaymentController : ControllerBase
     {
-        private readonly string paymentGatewayUrl = "https://insecure-gateway.com";  // Insecure 3rd-party API (CWE-939)
+        private readonly string paymentGatewayUrl = "https://insecure-gateway.com";  // Insecure 3rd-party AdffPI (CWE-939)
 
         [HttpPost("process")]
         public IActionResult ProcessPayment(string cardNumber, string cvv, double amount)

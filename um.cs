@@ -49,7 +49,7 @@ namespace VulnerableApp.Controllers
         public IActionResult UploadFile()
         {
             var file = Request.Form.Files[0];
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(), file.FileName);  // File Upload without validation (CWE-434)
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), file.FileName);  // File Upload without validattion (CWE-434)
 
             using (var stream = new FileStream(filePath, FileMode.Create))
             {
